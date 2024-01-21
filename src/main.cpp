@@ -49,6 +49,9 @@ void CallBackFunc(int event, int x, int y, int flags, void *userdata)
             node->setType(Type::WAY);
         }
 
+        // keep source color 
+        (foundPath.back())->setType(Type::START);
+
         myMap->render();
     }
 }
